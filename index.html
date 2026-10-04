@@ -1,92 +1,431 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Privacy Policy for the Bubble Plop mobile game.">
-  <meta name="robots" content="index,follow">
-  <title>Privacy Policy – Bubble Plop</title>
+  <meta name="color-scheme" content="dark">
+  <title>Datenschutzerklärung / Privacy Policy – Bubble Plop</title>
+  <meta name="description" content="Datenschutzerklärung und Privacy Policy für Bubble Plop.">
   <style>
-    :root { color-scheme: light dark; --bg:#f6f8fb; --card:#fff; --text:#172033; --muted:#667085; --line:#e4e7ec; --accent:#2563eb; --soft:#eef4ff; }
-    @media (prefers-color-scheme: dark) { :root { --bg:#0f141d; --card:#171e29; --text:#f3f4f6; --muted:#a7b0bf; --line:#2a3443; --accent:#8aabff; --soft:#17233d; } }
-    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.65;background:var(--bg);color:var(--text)}
-    main{width:min(900px,calc(100% - 32px));margin:42px auto 72px} article{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:clamp(24px,5vw,48px);box-shadow:0 12px 34px rgba(0,0,0,.06)}
-    h1,h2{line-height:1.25} h1{margin:0 0 8px;font-size:clamp(2rem,5vw,3rem);letter-spacing:-.025em} h2{margin:34px 0 8px;font-size:1.3rem}
-    p{margin:10px 0 0} a{color:var(--accent);text-underline-offset:2px}.meta{color:var(--muted);margin-bottom:26px}.summary{background:var(--soft);border-radius:14px;padding:18px 20px;margin:24px 0 6px}.contact{border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-top:12px}.small{color:var(--muted);font-size:.94rem} footer{color:var(--muted);text-align:center;font-size:.9rem;padding-top:22px}
+    :root {
+      --bg: #080F1A;
+      --panel: #121F30;
+      --panel-2: #0D1826;
+      --text: #FFF6E8;
+      --muted: #C8D8E6;
+      --accent: #75BDE9;
+      --accent-soft: #A9D9FA;
+      --border: #2A4258;
+      --link: #A9D9FA;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.68;
+      background: radial-gradient(circle at top, #132A42 0, var(--bg) 380px);
+      color: var(--text);
+    }
+    a { color: var(--link); }
+    a:hover { color: #D4EFFF; }
+    .wrap { max-width: 940px; margin: 0 auto; padding: 28px 18px 64px; }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      color: var(--accent-soft);
+    }
+    .bubble {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid var(--accent);
+      background: radial-gradient(circle at 35% 28%, #E9F7FF 0 7%, #6FB9E8 8%, #18334D 52%, #07121E 100%);
+      box-shadow: 0 0 18px rgba(117,189,233,.22);
+    }
+    .hero, section {
+      background: rgba(18,31,48,.94);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      box-shadow: 0 18px 50px rgba(0,0,0,.22);
+    }
+    .hero { padding: 28px; margin-bottom: 20px; }
+    section { padding: 26px 28px; margin: 0 0 20px; }
+    h1, h2, h3 { line-height: 1.24; }
+    h1 { margin: 0 0 8px; font-size: clamp(2rem, 5vw, 3rem); }
+    h2 { margin-top: 30px; color: var(--accent-soft); }
+    h2:first-child { margin-top: 0; }
+    h3 { color: #D4EFFF; }
+    p, li { color: var(--muted); }
+    strong { color: var(--text); }
+    .meta { color: #95AABC; margin: 0; }
+    .notice {
+      background: #0D1826;
+      border: 1px solid #284965;
+      border-left: 4px solid var(--accent);
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin: 18px 0 0;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 0;
+    }
+    .pill {
+      display: inline-block;
+      text-decoration: none;
+      color: #071625;
+      background: var(--accent);
+      border-radius: 999px;
+      padding: 9px 14px;
+      font-weight: 750;
+    }
+    .pill.secondary {
+      color: var(--accent-soft);
+      background: transparent;
+      border: 1px solid var(--accent-soft);
+    }
+    code {
+      background: #0B1622;
+      border: 1px solid #20364A;
+      color: #D4EFFF;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+    ul { padding-left: 22px; }
+    .divider { height: 1px; background: var(--border); margin: 34px 0; }
+    footer { text-align: center; color: #8599AA; font-size: .93rem; padding: 12px; }
+    @media (max-width: 640px) {
+      .hero, section { padding: 21px 18px; border-radius: 18px; }
+      h2 { font-size: 1.25rem; }
+    }
   </style>
 </head>
 <body>
-<main>
-<article>
-  <h1>Privacy Policy – Bubble Plop</h1>
-  <div class="meta">Last updated: 2 October 2026</div>
+  <main class="wrap">
+    <div class="brand"><span class="bubble" aria-hidden="true"></span> BUBBLE PLOP</div>
 
-  <p>This Privacy Policy explains how the mobile game <strong>Bubble Plop</strong> handles information when you use the app.</p>
+    <div class="hero">
+      <h1>Datenschutzerklärung / Privacy Policy</h1>
+      <p class="meta"><strong>Stand / Last updated:</strong> 4. Oktober 2026 / 4 October 2026</p>
+      <p class="meta"><strong>App:</strong> Bubble Plop &nbsp;·&nbsp; <strong>Paketname / Package:</strong> <code>com.bubbleplop.wis</code></p>
+      <nav aria-label="Sprache">
+        <a class="pill" href="#de">Deutsch</a>
+        <a class="pill secondary" href="#en">English</a>
+      </nav>
+    </div>
 
-  <div class="summary"><strong>Privacy at a glance:</strong> Bubble Plop does not require a user account. The current version does not use the developer's own server to store personal player data. Game settings and progress may be stored locally on your device. Optional in-app purchases are processed through Google Play.</div>
+    <section id="de" lang="de">
+      <h2>Datenschutzerklärung – Bubble Plop</h2>
 
-  <h2>1. Developer and privacy contact</h2>
-  <div class="contact"><strong>Wis-Ali Bagaschew</strong><br>Developer of Bubble Plop<br>Email: <a href="mailto:bubbleplop.support@gmail.com">bubbleplop.support@gmail.com</a></div>
+      <h2>1. Verantwortlicher und Kontakt</h2>
+      <p>
+        Verantwortlich für Bubble Plop:<br>
+        <strong>Wis-Ali Bagaschew</strong><br>
+        E-Mail: <a href="mailto:bubbleplop.support@gmail.com">bubbleplop.support@gmail.com</a>
+      </p>
 
-  <h2>2. Information required to play</h2>
-  <p>Bubble Plop does not require you to create an account or provide your name, email address, postal address, telephone number, contacts, photos, microphone data, camera data, or precise location in order to play.</p>
+      <h2>2. Überblick</h2>
+      <p>
+        Bubble Plop ist ein mobiles Spiel. Für das Spielen ist kein eigenes Bubble-Plop-Benutzerkonto erforderlich.
+        Bestimmte Daten können lokal auf dem Gerät gespeichert werden. Für Werbung, Einwilligungsverwaltung und
+        In-App-Käufe werden Dienste von Google eingesetzt, die Daten nach ihren eigenen Datenschutzbestimmungen verarbeiten.
+      </p>
 
-  <h2>3. Locally stored game data</h2>
-  <p>The app may store game-related information locally on your device, such as settings, high scores, game progress, and locally unlocked content. This information is used to provide the game's functionality and is not uploaded to a proprietary server operated by the developer.</p>
+      <h2>3. Lokal gespeicherte Spieldaten</h2>
+      <p>
+        Spielbezogene Informationen wie Einstellungen, Highscores, Spielfortschritt und lokal freigeschaltete Zustände
+        können auf dem Gerät gespeichert werden. Solche lokal gespeicherten Daten können in der Regel durch Löschen der
+        App-Daten oder durch Deinstallation der App entfernt werden.
+      </p>
 
-  <h2>4. In-app purchases and Google Play Billing</h2>
-  <p>Bubble Plop offers optional in-app purchases, including virtual in-game content or currency such as Bubbles. Purchases are processed using the <strong>Google Play billing system</strong>.</p>
-  <p>The developer does not directly collect or store your full payment card or bank account details. Payment processing is handled by Google.</p>
-  <p>To process, verify, unlock, or restore a purchase, the app may exchange technical purchase information with Google Play, such as a product identifier, purchase status, and purchase token where provided by the Google Play Billing interface. In the current version, this information is not sent to a proprietary backend server operated by the developer.</p>
+      <h2>4. In-App-Käufe über Google Play</h2>
+      <p>
+        Bubble Plop bietet optionale In-App-Käufe an, darunter den einmaligen Kauf <strong>„Remove Ads“</strong>.
+        Zahlungen werden über das <strong>Google-Play-Abrechnungssystem</strong> abgewickelt. Der Entwickler erhält keine
+        vollständigen Kreditkarten- oder Bankdaten.
+      </p>
+      <p>
+        Zur Prüfung, Freischaltung oder Wiederherstellung eines Kaufs können technische Kaufinformationen verarbeitet werden,
+        z. B. Produktkennung, Kaufstatus und Kauf-Token. Diese Informationen dienen der Abwicklung und Prüfung der jeweiligen
+        Berechtigung.
+      </p>
 
-  <h2>5. Restore Purchases</h2>
-  <p>If the app provides a “Restore Purchases” function, it may query Google Play to determine whether eligible purchases are associated with the Google account currently used on the device. This allows previously purchased content to be restored. The developer does not receive your complete payment details.</p>
+      <h2>5. Werbung mit Google AdMob</h2>
+      <p>
+        Bubble Plop verwendet <strong>Google AdMob / Google Mobile Ads SDK</strong>, um Werbung anzuzeigen. In der aktuellen
+        Monetarisierung können insbesondere Banner- und Interstitial-Anzeigen verwendet werden.
+      </p>
+      <p>Das Google Mobile Ads SDK kann dabei insbesondere folgende Daten automatisch erheben oder weitergeben:</p>
+      <ul>
+        <li>IP-Adresse, unter anderem zur Ableitung eines ungefähren Standorts,</li>
+        <li>Nutzerinteraktionen mit der App oder Anzeigen, z. B. App-Starts, Tippen oder Videoaufrufe,</li>
+        <li>Diagnose- und Leistungsinformationen,</li>
+        <li>Geräte- und Konto-IDs, einschließlich der Android-Werbe-ID, sofern verfügbar und zulässig.</li>
+      </ul>
+      <p>
+        Diese Daten können von Google und eingebundenen Werbepartnern für Anzeigenbereitstellung, Anzeigenmessung,
+        Analyse, Sicherheit und Betrugsprävention verarbeitet werden. Abhängig von Region, Einwilligung und Geräteeinstellungen
+        können personalisierte oder nicht personalisierte Anzeigen ausgeliefert werden. Auch bei nicht personalisierten Anzeigen
+        können technisch notwendige Daten für Auslieferung, Messung, Sicherheit und Betrugsprävention verarbeitet werden.
+      </p>
+      <p>
+        Weitere Informationen finden sich in der
+        <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Datenschutzerklärung von Google</a>
+        sowie unter
+        <a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer">Werbung bei Google</a>.
+      </p>
 
-  <h2>6. Advertising, analytics, and tracking</h2>
-  <p>The current version of Bubble Plop does not intentionally include third-party advertising SDKs, personalized advertising, or independently integrated analytics or tracking services.</p>
-  <p>If advertising, analytics, cloud services, or other third-party SDKs are added in a future version, this Privacy Policy and the corresponding Google Play Data safety disclosures will be updated as appropriate.</p>
+      <h2>6. Einwilligungsverwaltung (Google UMP)</h2>
+      <p>
+        Für Nutzer im Europäischen Wirtschaftsraum (EWR), im Vereinigten Königreich und in der Schweiz verwendet Bubble Plop
+        die Einwilligungsverwaltung von Google (User Messaging Platform / UMP). Darüber können Nutzer – soweit erforderlich –
+        der Verarbeitung für personalisierte Werbung zustimmen, nicht einwilligen oder ihre Optionen verwalten.
+      </p>
+      <p>
+        Die Einwilligungsentscheidung kann auf dem Gerät gespeichert und an beteiligte Werbetechnologieanbieter übermittelt
+        werden, damit die gewählte Datenschutzoption berücksichtigt wird. Soweit die App eine Datenschutz- oder
+        Einwilligungsoption bereitstellt, können Nutzer ihre Auswahl dort später erneut aufrufen und ändern.
+      </p>
 
-  <h2>7. App permissions</h2>
-  <p>Bubble Plop does not require access to your contacts, camera, microphone, or precise location for its core gameplay. If a future version requires additional permissions, the relevant purpose and data handling will be disclosed.</p>
+      <h2>7. „Remove Ads“</h2>
+      <p>
+        Nach erfolgreichem Kauf von „Remove Ads“ werden die von Bubble Plop automatisch angeforderten Banner- und
+        Interstitial-Anzeigen deaktiviert. Der Kauf ändert nichts daran, dass Google Play technische Daten zur
+        Kaufabwicklung und Wiederherstellung verarbeiten kann. Datenschutz- und Einwilligungsfunktionen können ebenfalls
+        weiterhin technisch erforderlich sein.
+      </p>
 
-  <h2>8. Sharing of personal data</h2>
-  <p>The developer does not sell personal data and does not share personal player data with third parties for advertising purposes.</p>
-  <p>Google Play is used as an external service for in-app purchases. Google's handling of information is governed by Google's own applicable privacy terms and policies.</p>
+      <h2>8. Analyse, Messung und Diagnosedaten</h2>
+      <p>
+        Auch ohne einen separaten Analyse-Dienst kann das Google Mobile Ads SDK Interaktions- und Diagnosedaten für
+        Werbemessung, Analyse und Betrugsprävention verarbeiten. Falls Bubble Plop zukünftig zusätzliche Analyse- oder
+        Trackingdienste integriert, wird diese Datenschutzerklärung entsprechend aktualisiert.
+      </p>
 
-  <h2>9. Support communications</h2>
-  <p>If you voluntarily contact the developer by email, the information you provide, such as your email address and the contents of your message, will be used to respond to and manage your request.</p>
-  <p>Such correspondence is retained only for as long as reasonably necessary to handle the request, maintain necessary records, resolve disputes, or comply with applicable legal obligations.</p>
+      <h2>9. Berechtigungen und Internetzugriff</h2>
+      <p>
+        Bubble Plop benötigt für Werbung, Einwilligungsverwaltung und In-App-Käufe eine Internetverbindung. Für die
+        Kernfunktion des Spiels werden keine Berechtigungen für Kontakte, Kamera, Mikrofon oder präzisen Standort benötigt.
+      </p>
 
-  <h2>10. Legal basis for support communications</h2>
-  <p>Where the GDPR applies, support correspondence is processed as necessary to respond to your request and, where applicable, on the basis of the developer's legitimate interest in providing user support, maintaining the app, preventing abuse, and documenting relevant communications.</p>
+      <h2>10. Weitergabe von Daten</h2>
+      <p>
+        Der Entwickler verkauft keine personenbezogenen Daten. Daten können jedoch im Rahmen der oben beschriebenen
+        Funktionen an Google und die von Google für die Anzeigenbereitstellung eingebundenen Partner übermittelt werden.
+        Die jeweilige Verarbeitung richtet sich nach den Bedingungen und Datenschutzinformationen dieser Anbieter.
+      </p>
 
-  <h2>11. Data retention and deletion</h2>
-  <p>Because the current version does not create user accounts or store personal player profiles on a proprietary developer server, there is generally no server-side player profile held by the developer that needs to be deleted.</p>
-  <p>Locally stored app data can generally be removed by clearing the app's storage in Android settings or by uninstalling the app. Records held by Google in connection with Google Play purchases are subject to Google's own retention and deletion practices.</p>
+      <h2>11. Speicherung und Löschung</h2>
+      <p>
+        Lokal gespeicherte Spieldaten können durch Löschen der App-Daten oder Deinstallation entfernt werden. Für Daten,
+        die von Google im Zusammenhang mit Google Play, AdMob oder der Einwilligungsverwaltung verarbeitet werden, gelten
+        die jeweiligen Aufbewahrungs- und Löschregeln von Google und gegebenenfalls beteiligten Werbepartnern.
+      </p>
 
-  <h2>12. Data security</h2>
-  <p>The developer aims to limit data processing to what is necessary for the app's operation and support. Payment information is not stored on a proprietary developer server, and payment processing relies on the security mechanisms provided by Google Play.</p>
+      <h2>12. Support-Anfragen</h2>
+      <p>
+        Wenn Nutzer den Entwickler freiwillig per E-Mail kontaktieren, werden die übermittelten Angaben ausschließlich zur
+        Bearbeitung der Anfrage, für erforderliche Nachweise und zur Erfüllung gesetzlicher Pflichten verwendet und nur so
+        lange gespeichert, wie dies dafür erforderlich ist.
+      </p>
 
-  <h2>13. Children</h2>
-  <p>Bubble Plop does not require users to provide personal contact information in order to play. The current version does not intentionally collect names, email addresses, or other direct contact information from children through the gameplay itself.</p>
-  <p>Where special legal or platform requirements apply to younger users, the app will be configured and maintained in accordance with the applicable requirements.</p>
+      <h2>13. Kinder und Jugendliche</h2>
+      <p>
+        Bubble Plop ist als Spiel für ein allgemeines Publikum konzipiert und verlangt für das Spielen keine direkten
+        persönlichen Angaben wie Name, Anschrift oder Telefonnummer. Soweit für bestimmte Altersgruppen besondere gesetzliche
+        oder plattformspezifische Anforderungen gelten, werden diese bei der Konfiguration von Werbung und Einwilligung
+        berücksichtigt.
+      </p>
 
-  <h2>14. Your privacy rights</h2>
-  <p>Where applicable under data protection law, including the GDPR, you may have rights concerning personal data processed by the developer, including the rights to request access, correction, deletion, restriction of processing, or to object to certain processing.</p>
-  <p>To make a privacy request, contact <a href="mailto:bubbleplop.support@gmail.com">bubbleplop.support@gmail.com</a>. You may also have the right to lodge a complaint with the competent data protection supervisory authority.</p>
+      <h2>14. Rechte betroffener Personen</h2>
+      <p>
+        Soweit der Entwickler personenbezogene Daten verarbeitet, können betroffene Personen nach Maßgabe des anwendbaren
+        Datenschutzrechts insbesondere Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung oder Widerspruch
+        verlangen. Anfragen können an
+        <a href="mailto:bubbleplop.support@gmail.com">bubbleplop.support@gmail.com</a> gerichtet werden.
+      </p>
+      <p>
+        Für Daten, die Google als eigener Anbieter verarbeitet, können zusätzlich die Datenschutz- und Kontoeinstellungen von
+        Google verwendet werden.
+      </p>
 
-  <h2>15. International availability</h2>
-  <p>This Privacy Policy is publicly available regardless of where the app is downloaded. Third-party services such as Google Play may process information in accordance with their own global infrastructure and privacy policies.</p>
+      <h2>15. Datensicherheit</h2>
+      <p>
+        Der Entwickler beschränkt die Verarbeitung auf das für die App-Funktionen notwendige Maß. Zahlungsdaten werden nicht
+        direkt vom Entwickler verarbeitet. Datenübertragungen an Google-Dienste erfolgen nach den Sicherheitsmechanismen der
+        jeweiligen Google-Dienste.
+      </p>
 
-  <h2>16. Changes to this Privacy Policy</h2>
-  <p>This Privacy Policy may be updated when the app's features, data practices, third-party services, or legal requirements change. The current version will remain available at this public URL, and the “Last updated” date above will be revised when material changes are made.</p>
+      <h2>16. Änderungen dieser Datenschutzerklärung</h2>
+      <p>
+        Diese Datenschutzerklärung kann angepasst werden, wenn sich Funktionen, eingesetzte Dienste oder rechtliche
+        Anforderungen ändern. Die aktuelle Fassung wird unter derselben öffentlich zugänglichen Adresse bereitgestellt.
+      </p>
 
-  <h2>17. Contact</h2>
-  <div class="contact"><strong>Wis-Ali Bagaschew</strong><br>Bubble Plop<br>Email: <a href="mailto:bubbleplop.support@gmail.com">bubbleplop.support@gmail.com</a></div>
+      <h2>17. Kontakt</h2>
+      <p>
+        Fragen zum Datenschutz bei Bubble Plop:<br>
+        <strong>Wis-Ali Bagaschew</strong><br>
+        <a href="mailto:bubbleplop.support@gmail.com">bubbleplop.support@gmail.com</a>
+      </p>
+    </section>
 
-  <p class="small">This Privacy Policy applies to Bubble Plop as currently configured. If the app's data practices change, the policy should be reviewed and updated before or when the relevant version is released.</p>
-</article>
-<footer>© 2026 Bubble Plop · Privacy Policy</footer>
-</main>
+    <section id="en" lang="en">
+      <h2>Privacy Policy – Bubble Plop</h2>
+
+      <h2>1. Controller and contact</h2>
+      <p>
+        Responsible for Bubble Plop:<br>
+        <strong>Wis-Ali Bagaschew</strong><br>
+        Email: <a href="mailto:bubbleplop.support@gmail.com">bubbleplop.support@gmail.com</a>
+      </p>
+
+      <h2>2. Overview</h2>
+      <p>
+        Bubble Plop is a mobile game. No separate Bubble Plop user account is required to play.
+        Certain game data may be stored locally on the device. Google services are used for advertising,
+        consent management and in-app purchases and process data under their own privacy terms.
+      </p>
+
+      <h2>3. Locally stored game data</h2>
+      <p>
+        Game-related information such as settings, high scores, progress and locally unlocked states may be stored on the
+        device. Such local data can generally be removed by clearing the app's data or uninstalling the app.
+      </p>
+
+      <h2>4. In-app purchases through Google Play</h2>
+      <p>
+        Bubble Plop offers optional in-app purchases, including the one-time <strong>“Remove Ads”</strong> purchase.
+        Payments are processed through the <strong>Google Play billing system</strong>. The developer does not receive full
+        credit-card or bank-account details.
+      </p>
+      <p>
+        Technical purchase information, such as the product identifier, purchase status and purchase token, may be processed
+        to verify, unlock or restore an entitlement.
+      </p>
+
+      <h2>5. Advertising with Google AdMob</h2>
+      <p>
+        Bubble Plop uses <strong>Google AdMob / Google Mobile Ads SDK</strong> to display advertising. The current monetisation
+        setup may include banner and interstitial ads.
+      </p>
+      <p>The Google Mobile Ads SDK may automatically collect or share data including:</p>
+      <ul>
+        <li>IP address, including for estimating a device's approximate location,</li>
+        <li>user interactions with the app or ads, such as app launches, taps or video views,</li>
+        <li>diagnostic and performance information,</li>
+        <li>device and account identifiers, including the Android Advertising ID where available and permitted.</li>
+      </ul>
+      <p>
+        Google and participating advertising partners may process this information for ad delivery, measurement, analytics,
+        security and fraud prevention. Depending on the user's region, consent choices and device settings, personalised or
+        non-personalised ads may be served. Even non-personalised ads may require limited technical processing for delivery,
+        measurement, security and fraud prevention.
+      </p>
+      <p>
+        More information is available in
+        <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google's Privacy Policy</a>
+        and
+        <a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer">Google Advertising Policies and Technologies</a>.
+      </p>
+
+      <h2>6. Consent management (Google UMP)</h2>
+      <p>
+        For users in the European Economic Area (EEA), the United Kingdom and Switzerland, Bubble Plop uses Google's
+        User Messaging Platform (UMP). Where required, users can consent to processing for personalised advertising,
+        decline consent or manage their privacy choices.
+      </p>
+      <p>
+        Consent choices may be stored on the device and communicated to participating advertising technology providers so the
+        selected privacy choice can be respected. Where the app provides a privacy or consent settings entry, users can later
+        reopen and change their choices there.
+      </p>
+
+      <h2>7. “Remove Ads”</h2>
+      <p>
+        After a successful “Remove Ads” purchase, Bubble Plop disables automatically requested banner and interstitial ads.
+        The purchase does not prevent Google Play from processing technical information required for purchase handling and
+        restoration. Privacy and consent functionality may also remain technically necessary.
+      </p>
+
+      <h2>8. Analytics, measurement and diagnostics</h2>
+      <p>
+        Even without a separate analytics service, the Google Mobile Ads SDK may process interaction and diagnostic information
+        for advertising measurement, analytics and fraud prevention. If Bubble Plop later adds additional analytics or tracking
+        services, this Privacy Policy will be updated accordingly.
+      </p>
+
+      <h2>9. Permissions and internet access</h2>
+      <p>
+        Bubble Plop requires internet access for advertising, consent management and in-app purchases. The core game does not
+        require access to contacts, camera, microphone or precise location.
+      </p>
+
+      <h2>10. Sharing of data</h2>
+      <p>
+        The developer does not sell personal data. Data may, however, be transmitted to Google and advertising partners used by
+        Google for the functions described above. Their processing is governed by their applicable terms and privacy information.
+      </p>
+
+      <h2>11. Retention and deletion</h2>
+      <p>
+        Locally stored game data can be removed by clearing the app's data or uninstalling the app. Data processed by Google in
+        connection with Google Play, AdMob or consent management is subject to Google's and, where applicable, advertising
+        partners' retention and deletion practices.
+      </p>
+
+      <h2>12. Support requests</h2>
+      <p>
+        If users voluntarily contact the developer by email, the information provided is used only to handle the request,
+        maintain necessary records and comply with legal obligations, and is retained only as long as needed for those purposes.
+      </p>
+
+      <h2>13. Children and young users</h2>
+      <p>
+        Bubble Plop is designed as a general-audience game and does not require direct personal information such as a name,
+        postal address or telephone number to play. Where special legal or platform requirements apply to particular age groups,
+        these are taken into account when configuring advertising and consent.
+      </p>
+
+      <h2>14. Data protection rights</h2>
+      <p>
+        Where the developer processes personal data, affected persons may exercise rights available under applicable law,
+        including access, rectification, erasure, restriction or objection where applicable. Requests can be sent to
+        <a href="mailto:bubbleplop.support@gmail.com">bubbleplop.support@gmail.com</a>.
+      </p>
+      <p>
+        For information processed by Google as a separate provider, Google's privacy and account controls may also be used.
+      </p>
+
+      <h2>15. Data security</h2>
+      <p>
+        The developer limits processing to what is necessary for the app's functionality. Payment information is not processed
+        directly by the developer. Transfers to Google services are protected according to the security mechanisms of those
+        services.
+      </p>
+
+      <h2>16. Changes to this Privacy Policy</h2>
+      <p>
+        This Privacy Policy may be updated when features, services or legal requirements change. The current version will be
+        made available at the same publicly accessible address.
+      </p>
+
+      <h2>17. Contact</h2>
+      <p>
+        Privacy questions regarding Bubble Plop:<br>
+        <strong>Wis-Ali Bagaschew</strong><br>
+        <a href="mailto:bubbleplop.support@gmail.com">bubbleplop.support@gmail.com</a>
+      </p>
+    </section>
+
+    <footer>Bubble Plop · Privacy Policy · 2026</footer>
+  </main>
 </body>
 </html>
